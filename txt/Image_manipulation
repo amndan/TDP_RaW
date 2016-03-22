@@ -1,0 +1,3 @@
+This task force deals with recognizing of components to grasp and QR-codes. With the help of an
+Intel RealSense camera the orientations and positions should be determined by given objects. Then
+this information is made available for the robot.

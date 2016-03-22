@@ -1,0 +1,38 @@
+#Important points to be done for the TDP:
+
+Deadline: 29.03
+
+We have to write it on LATEX so make sense to use this files which later would be implemented in the main file. We use the repository to coordinate the work (Dan, would you create it, or should I?).
+
+*GLOBAL VIEW:
+- Homepage (vgl. RB); efi-hp (autonohm.de)--> philipp
+- Paper
+     - abstract
+     - pictures robot
+     - details SW
+     - details HW
+     - innovative technology
+     - reusability of the system or parts thereof
+     - applicability and relevance to industrial tasks
+
+
+* ABOUT THE FILES:
+- Abstract: (missing) Philipp
+- Introduction: A revision could be goog but it is OK in general.
+- HW: ??A second laser scaner for Navigation with AMCL / just obstacle avoidance??. Daniel could you add shomething from computer for example?
+- SW: 1- Introduction is more or less ok. 2- Add more packages we use? 3- I think that something is missing but I don't know what exactly. Specific software will be explained later.
+- Object Manipulation: Dominik.
+- Image processing: Dominik.
+- Localization and Mapping: Daniel.
+- Global Navigation: Philipp. I removed the local Navigation and added 2 lines at the bottom. At the moment we don't use a local navigation but it is possible to use it by using the navigation_stack from ROS. It would be interesting if we finally use the amcl and the two lases: Dan, what do you think??
+- Mission and path planning: this is bullshit, but we could use it in case we need to make it longer?
+- Conclusion: Too short, Probably Philipp can improove it.
+- Bibliography (missing). Everybody could add some so we fill something there.  
+
+- Pictures robot? take some fotos or use the old ones? the graspper is not mounted, computer also not... 
+- Innovative technology:(missing) Not necessary, Dan if you want to explain here your new localization...??
+- Applicability and relevance to industrial tasks: (missing)
+
+
+
+

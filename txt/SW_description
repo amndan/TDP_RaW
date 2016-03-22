@@ -1,0 +1,5 @@
+The software architecture is based on the Robot Operating System ROS. The actuators of the robot are controlled by the basic youBot-ROS-drivers. The system runs with Ubuntu 12.04 and ROS Indigo communication infrastructure is used to communicate and pass information between the nodes, as for example camera date or execution orders for the 5 DOF manipulator. 
+
+Several software tools are needed for image processing and controlling the system like openCV, PCL and ROS amcl and Stack_Navigation.
+We also implemented our own software for the SLAM-Localization in ohm_tsd_slam which is open source in GITHUB. 
+

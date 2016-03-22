@@ -1,0 +1,7 @@
+We use the KUKA youBot omni-directional mobile platform, which is equipped with a 5 DOF manipulator. At the end effector of the manipulator an Intel RealSense camera with a motion sensor has been mounted. Next to the camera we replaced the standar gripper from youbot with a also youbots Soft two-finger gripper. Thanks to it we are able to grasp biger and more complex obcts more precisely.
+
+A Hokuyo URG-04LX-UG01 laser scanner at the front of the youBot platform is used for localization and navigation. 
+
+Last year we used the internal computer, together with an external ASUS Mini PC (4 GB RAM, Intel Core i3). We used the internal computer in the youbot to start-up the motors and also for the SLAM. That was a huge error because we added an enormous data tranfer between the two computers what slowed down the complete system. To avoid the communication problems and latency between them both, we decided to run everything except the motor drivers on the external PC. We also replace the slow i3 for a more powerful CPU Intel Core i7-4790K, 4x 4.00GHz. 
+
+
