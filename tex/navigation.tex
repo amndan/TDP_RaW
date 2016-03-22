@@ -1,0 +1,5 @@
+In order to create the map, we use the SLAM developed by our colleges in Rescue team at the Georg-Simon-Ohm University of applied science. The SLAM itself is based on the iterative closest point (ICP) algorithm and laser data provided by the front-mounted Hokuyo URG04-LX laser scanner. Then we base the localization on the amcl package provided by ROS.
+
+The data provided by the Hokuyo is additionally used for collision avoidance. If an obstacle is detected, a report goes to the path planning state which adjusts the path.
+
+There is no local navigation at the moment. In case we find an obstacle owr robot would stop and replan by using again the global navigation. We are thinking about implementing a second laser scaner and base the navigacion on the Slack\_navigation from ROS. Then we would also use a local navigation.
