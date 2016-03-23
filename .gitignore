@@ -8,7 +8,7 @@
 *.toc
 
 ## pdf nicht mit durch ziehen
-*ain.pdf
+#*ain.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
