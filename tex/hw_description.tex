@@ -1,5 +1,39 @@
-We use the KUKA youBot omni-directional mobile platform, which is equipped with a 5 DOF manipulator. At the end effector of the manipulator an Intel RealSense camera with a motion sensor has been mounted. Next to the camera we replaced the standar gripper from youbot with a also youbots Soft two-finger gripper. Thanks to it we are able to grasp biger and more complex obcts more precisely.
+We use the KUKA youBot omni-directional mobile platform, which is equipped with a 5 DOF manipulator. At the end effector of the manipulator an Intel RealSense camera with a motion sensor has been mounted. Next to the camera we replaced the standard gripper from youbot with an also youbots soft two-finger gripper. Thanks to it we are able to grasp bigger and more complex objects more precisely.
 
-A Hokuyo URG-04LX-UG01 laser scanner at the front of the youBot platform is used for localization and navigation. 
+A Hokuyo URG-04LX-UG01 laser scanner at the front of the youBot platform is used for localization and navigation. We are planning to add a second laser scanner of the same type on the back of the robot. This improves localization quality and ensures better obstacle avoidance mainly when driving backwards with the robot.
 
-Last year we used the internal computer, together with an external ASUS Mini PC (4 GB RAM, Intel Core i3). We used the internal computer in the youbot to start-up the motors and also for the SLAM. That was a huge error because we added an enormous data tranfer between the two computers what slowed down the complete system. To avoid the communication problems and latency between them both, we decided to run everything except the motor drivers on the external PC. We also replace the slow i3 for a more powerful CPU Intel Core i7-4790K, 4x 4.00GHz. 
+Last year we used the internal computer, together with an external ASUS Mini PC (4 GB RAM, Intel Core i3). We used the internal computer in the youbot to start-up the motors and also for the SLAM. That was a huge error because we added an enormous data tranfer between the two computers what slowed down the complete system. To avoid the communication problems and latency between them both, we decided to run everything except the motor drivers on the external PC. We also replace the slow i3 for a more powerful CPU Intel Core i7-4790K, 4x 4.00GHz. Table XY \todo{ref} shows the new hardware specifications in detail\todo{fill in specs and format table}.
+
+\begin{table}[h]
+	\caption{Hardware Specifications}
+	\centering
+	\begin{tabular}{ | p{3cm} | p{3cm} | }
+		\hline
+		\bfseries{PC 1} &  \\
+		\hline
+		CPU & XXXXXXXX \\
+		RAM & XXXXXXXX \\
+		HDD & XXXXXXXX \\
+		\hline \hline
+		\bfseries{PC 2} &  \\
+		\hline
+		CPU & XXXXXXXX \\
+		RAM & XXXXXXXX \\
+		HDD & XXXXXXXX \\
+		\hline \hline
+		\bfseries{Grasp} &  \\
+		\hline
+		a & XXXXXXXX \\
+		b & XXXXXXXX \\
+		c & XXXXXXXX \\
+		\hline \hline
+		\bfseries{Lidar} &  \\
+		\hline
+		a & XXXXXXXX \\
+		b & XXXXXXXX \\
+		c & XXXXXXXX \\
+		\hline
+	\end{tabular}
+	\label{tab:hw}
+\end{table}
+
