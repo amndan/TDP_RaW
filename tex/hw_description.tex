@@ -2,7 +2,10 @@ We use the KUKA youBot omni-directional mobile platform, which is equipped with 
 
 A Hokuyo URG-04LX-UG01 laser scanner at the front of the youBot platform is used for localization and navigation. We are planning to add a second laser scanner of the same type on the back of the robot. This improves localization quality and ensures better obstacle avoidance mainly when driving backwards with the robot.
 
-Last year we used the internal computer, together with an external ASUS Mini PC (4 GB RAM, Intel Core i3). We used the internal computer in the youbot to start-up the motors and also for the SLAM. That was a huge error because we added an enormous data tranfer between the two computers what slowed down the complete system. To avoid the communication problems and latency between them both, we decided to run everything except the motor drivers on the external PC. We also replace the slow i3 for a more powerful CPU Intel Core i7-4790K, 4x 4.00GHz. Table XY \todo{ref} shows the new hardware specifications in detail\todo{fill in specs and format table}. \todo{describe the router and what we need it for}
+Last year we used the internal computer, together with an external ASUS Mini PC (4 GB RAM, Intel Core i3). We used the internal computer in the youbot to start-up the motors and also for the SLAM. That was a huge error because we added an enormous data tranfer between the two computers what slowed down the complete system. To avoid the communication problems and latency between them both, we decided to run everything except the motor drivers on the external PC. We also replace the slow i3 for a more powerful CPU Intel Core i7-4790K, 4x 4.00GHz. Table XY \todo{ref} shows the new hardware specifications in detail\todo{fill in specs and format table}. 
+
+\todo{describe the router and what we need it for}
+\todo{describe the IMU and what we need it for}
 
 \begin{table}[h]
 	\caption{Hardware Specifications}
@@ -36,6 +39,12 @@ Last year we used the internal computer, together with an external ASUS Mini PC 
 		c & XXXXXXXX \\
 		\hline \hline
 		\bfseries{Router} &  \\
+		\hline
+		a & XXXXXXXX \\
+		b & XXXXXXXX \\
+		c & XXXXXXXX \\
+		\hline \hline
+		\bfseries{IMU} &  \\
 		\hline
 		a & XXXXXXXX \\
 		b & XXXXXXXX \\
