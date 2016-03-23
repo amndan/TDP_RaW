@@ -1,6 +1,8 @@
-For planning issues, a State Machine with singleton pattern design is used. Every state is designed
-to be as small as possible. The origin and destination is handed over to an A* path planning
-algorithm. For debugging issues, the nominal value of the joints can be controlled by a virtual
-master.
+For the main control of the system, a State Machine with singleton pattern design is used. Every state is designed to be as small as possible. For the German Open 2015, we implemented three main states divided on smaller sub-states: Move, grasp and deliver.
 
-\todo{more description on the statemachine; jon}
+Once we get the tasks from the referee box, the first step for every test is to drive to a specific position and an specific orientation. First we use our own path planner, based on the A* algorithm. Once we are on the desired position we smoothly approach to the service area and perform the task of grasping or delivering an object. 
+
+As a first attempt on the RoboCup atWork competition, we decided not to try the Precision Placement and Conveyor Bel test. It was a good idea because during this attempt we had big problems with the localization and navigation, which are basic functions and limited us to try further and more difficult tests. We gain experience and improve our software so we will try this time more difficult tests.
+
+Both the State Machine and the A* path planner algorithm could be found on GitHub under our Laboratory's repository, "autonohm/obviously". 
+
