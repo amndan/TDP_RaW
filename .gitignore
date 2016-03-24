@@ -120,3 +120,6 @@ sympy-plots-for-*.tex/
 # WinEdt
 *.bak
 *.sav
+
+#dia
+*.autosave
