@@ -1,1 +1,17 @@
-add some text here
+To grab an object reliable, we needed a stable image processing. Our current system uses a 2D camera. The used Intel RealSense camera is also able to handle future task like 3D object recognition. To accomplish 3D tasks, the structured light method will be used.
+
+Important criteria for the 2D image processing:
+
+\begin{enumerate}
+	\item speed
+	\item stability
+	\item low use of cpu resources
+\end{enumerate}
+
+To fulfill these criteria, the OpenCV\footnote{http://opencv.org/} library has been used. The incoming image gets converted into a gray-scale image. Some times it's necessary to apply an Median or Gaussian filter afterwards, to get better results. Finally the edges will be extracted through the canny edge detector. The received binary edges image is now ready to be processed.
+
+To recognize a certain object, a complete contour needs to be defined. Complete contours get identified through the findContours function from OpenCV. The saved contours get sorted by given attributes like number of corners, area size or diagonal length.
+
+If a object has been identified, the position of the object gets calculated. To get accurate results, the distance between camera and object needs to be fixed. Through a fixed distance, pixel data can be converted into meters. For a prices griping X,Y,Z coordinates and the Z rotation of the object will be calculated. After calculation the data gets published and accessible to the manipulation.
+
+
