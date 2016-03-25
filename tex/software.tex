@@ -1,14 +1,39 @@
-what should come here:
-\begin{enumerate}
-	\item mention all software in short even if its obvious (vim, screen, top, eclipse, ...)
-	\item mention why we need each piece of software
-	\item we should describe the time sync from chrony \todo{Helmut}
-	\item images (dd, gzip) and backup mainboard
-	\item also mention ros software --> all ros packages - and what we need it for in shorts
-	\item SIMULATION; own chapter or here \todo{jon}
-\end{enumerate}
+The software architecture is based on the Robot Operating System ROS. The system runs with Ubuntu 14.04 and ROS Indigo installed. The ROS communication infrastructure is used to communicate and pass information between the nodes, as for example camera data or execution orders for the 5 DOF manipulator. 
 
-The software architecture is based on the Robot Operating System ROS. The actuators of the robot are controlled by the basic youBot-ROS-drivers. The system runs with Ubuntu 14.04 and ROS Indigo communication infrastructure is used to communicate and pass information between the nodes, as for example camera data or execution orders for the 5 DOF manipulator. 
+Several software tools are needed for image processing and controlling the system. In the following we generally describe the software we use when developing and in the contest.
 
-Several software tools are needed for image processing and controlling the system like openCV, PCL and ROS amcl and Stack\_Navigation.
-We also implemented our own software for the SLAM-Localization in ohm\_tsd\_slam which is open source in GITHUB. 
+\begin{description}
+	\item [cgdb] For online-debugging we use cgdb. It is a command line interface to the GNU debugger software. 
+	\item [dd] We create images from the hard discs to recover from a hard disc failure at the contest.
+	\item [eclipse] For all C++ development we use eclipse IDE. 
+	\item [chrony] \todo{helmut chrony}
+	\item [git] Our software is maintained via git version  control system. Git enables us working simultaneously on our software tree.  
+	\item [htop] To watch active processes and CPU-Load we use htop. 
+	\item [openssh-server] It provides access to the robot via ssh protocol. 
+	\item [QtSixA] We steer our youBot with a Playstation~3 joystick. We need this software to connect the joystick to the PC via bluetooth.
+	\item  [screen] Each time we accessing the platform through ssh we enter a screen session. With this software we are able to open multiple command line sessions, set a split screen and reconnect to a session if network connection drops. 
+	\item [stress] We used stress to test our thermal management. It immediately can switch all CPU load to 100\%, so it simulates worst case CPU load. 
+	\item [vim] For developing over ssh connection on the robots PCs, or editing ROS-Launchfiles we use vim text editor with several plugins.
+\end{description}
+
+\noindent Additionally we use the following ROS packages:
+
+\begin{description}
+	\item [amcl] For localization problem we eventually use amcl package. It implements a particle filter algorithm. (see chapter \ref{sec:loc})
+	\item [navigation] For global/local path planning, path regulation and obstacle detection/avoidance we plan to use the navigation stack from ROS.
+	\item [robot-pose-ekf] For fusing the data from the IMU and the wheel encoders we use the robot-pose-ekf. It is an implementation of an extended Kalman filter algorithm. It enables us to mix the two systems and improves the odometry data from the wheel encoders.
+	\item [STDR-Simulator] We use it for simulating everything except the actuator. Every team member can test software through simulation in STDR, before testing with the robot in real.
+	\item [youbot-driver] Our youBot platform is controlled with this package. So we are able to send movement commands from PC1 to PC2 over ROS. On PC2, which is connected to the motor drivers and the actuator via EtherCAT protocol, youbot-drivers are running.
+	\todo{dominik: add software for vision please}
+\end{description}
+
+\noindent Finally our own software packages:
+
+\begin{description}
+	\item [ohm-tsd-slam] For recording a map from the environment we use out own SLAM algorithm. (see chapter~\ref{sec:slam})
+	\item [particle-filter] For localization problem we eventually use our own particle filter instead of amcl package. (see chapter~\ref{sec:loc})
+	\item [statemachine] To control the robot we have implemented a statemachine algorithm with the statemachine framework from our laboratory. (see chapter~\ref{sec:mis})
+\end{description}
+
+%Several software tools are needed for image processing and controlling the system like openCV, PCL and ROS amcl and Stack\_Navigation.
+%We also implemented our own software for the SLAM-Localization in ohm\_tsd\_slam which is open source in GITHUB. 

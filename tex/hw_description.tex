@@ -1,13 +1,18 @@
-We use the KUKA youBot omni-directional mobile platform, which is equipped with a 5 DOF manipulator. At the end effector of the manipulator an Intel RealSense camera with a motion sensor has been mounted. Next to the camera we replaced the standard gripper from youbot with an also youbots soft two-finger gripper. Thanks to it we are able to grasp bigger and more complex objects more precisely.
+We use the KUKA youBot omni-directional mobile platform, which is equipped with a 5 DOF manipulator (Figure~\ref{fig:youBot}). At the end effector of the manipulator an Intel RealSense camera with a motion sensor has been mounted. Next to the camera we replaced the standard gripper from youBot with an also youBots soft two-finger gripper. Thanks to it we are able to grasp bigger and more complex objects more precisely.
 
-A Hokuyo URG-04LX-UG01 laser scanner at the front of the youBot platform is used for localization and navigation. We are planning to add a second laser scanner of the same type on the back of the robot. This improves localization quality and ensures better obstacle avoidance mainly when driving backwards with the robot.
+\begin{figure}[htbp]
+	\centering
+	\missingfigure[figwidth=6cm]{image from youBot + Gripper}
+	\caption{KUKA youBot Plattform}
+	\label{fig:youBot}
+\end{figure}
 
-Last year we used the internal computer, together with an external ASUS Mini PC (4 GB RAM, Intel Core i3). We used the internal computer in the youbot to start-up the motors and also for the SLAM. That was a huge error because we added an enormous data tranfer between the two computers what slowed down the complete system. To avoid the communication problems and latency between them both, we decided to run everything except the motor drivers on the external PC. We also replace the slow i3 for a more powerful CPU Intel Core i7-4790K, 4x 4.00GHz. Table XY \todo{ref} shows the new hardware specifications in detail\todo{fill in specs and format table}. 
+A Hokuyo URG-04LX-UG01 laser scanner at the front of the youBot platform is used for localization and navigation. We are planning to add a second laser scanner of the same type on the back of the robot. This improves localization quality and ensures better obstacle avoidance, mainly when driving backwards with the robot.
 
-\todo{describe the router and what we need it for}
-\todo{describe the IMU and what we need it for}
+Last year we used the internal computer, together with an external ASUS Mini PC (4 GB RAM, Intel Core i3). We used the internal computer in the youBot to start-up the motors and also for the SLAM. This was a huge error because we added an enormous data transfer between the two computers, what slowed down the complete system. To avoid the communication problems and latency between them both, we decided to run everything, except the motor drivers, on the external PC. We also replace the slow i3 for a more powerful CPU Intel Core i7-4790K, 4x 4.00GHz. Table~\ref{tab:hw} shows our new hardware specifications\todo{fill in specs and format table}. 
 
-\begin{table}[h]
+\begin{table}[htbp]
+	\label{tab:hw}
 	\caption{Hardware Specifications}
 	\centering
 	\begin{tabular}{ | p{2cm} | p{3cm} | }
@@ -54,3 +59,8 @@ Last year we used the internal computer, together with an external ASUS Mini PC 
 	\label{tab:hw}
 \end{table}
 
+For connecting the two PCs we use a router mounted on the bag of youBot. With external machines we can connect to the routers network and communicate with both PCs on the youBot.
+
+We also added an Inertial Measurement Unit~(IMU) to gather information about the heading of the platform. On the IMU runs a fusion algorithm which provides the orientation of the platform as quaternion or Euler angles.
+
+\clearpage
