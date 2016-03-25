@@ -23,7 +23,7 @@ Several software tools are needed for image processing and controlling the syste
 	\item [navigation] For global/local path planning, path regulation and obstacle detection/avoidance we plan to use the navigation stack from ROS.
 	\item [robot-pose-ekf] For fusing the data from the IMU and the wheel encoders we use the robot-pose-ekf. It is an implementation of an extended Kalman filter algorithm. It enables us to mix the two systems and improves the odometry data from the wheel encoders.
 	\item [stdr-simulator] We use it for simulating everything except the actuator. Every team member can test software through simulation in STDR, before testing with the robot in real.
-	\item [youbot-driver] Our youBot platform is controlled with this package. So we are able to send movement commands from PC1 to PC2 over ROS. On PC2, which is connected to the motor drivers and the actuator via EtherCAT protocol, youbot-drivers are running.
+	\item [youbot-driver] Our youBot platform is controlled with this package. So we are able to send movement commands from PC1 to PC2 over ROS. The Drivers are running on PS2 , which is connected to the motor drivers and the actuator via EtherCAT protocol.
 	\todo{dominik: add software for vision please}
 \end{description}
 
