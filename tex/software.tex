@@ -20,6 +20,7 @@ Several software tools are needed for image processing and controlling the syste
 
 \begin{description}
 	\item [amcl] For localization problem we eventually use amcl package. It implements a particle filter algorithm. (see chapter \ref{sec:loc})
+	\item [map-server] Storing and loading occupancy-grid-maps is done by the map-server package.
 	\item [navigation] For global/local path planning, path regulation and obstacle detection/avoidance we plan to use the navigation stack from ROS.
 	\item [robot-pose-ekf] For fusing the data from the IMU and the wheel encoders we use the robot-pose-ekf. It is an implementation of an extended Kalman filter algorithm. It enables us to mix the two systems and improves the odometry data from the wheel encoders.
 	\item [stdr-simulator] We use it for simulating everything except the actuator. Every team member can test software through simulation in STDR, before testing with the robot in real.

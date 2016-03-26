@@ -1,12 +1,12 @@
 As a first attempt on the RoboCup atWork \todo{consistent style of RaW} competition, we decided not to try the Precision Placement and Conveyor Belt test. It was a good idea because during this attempt we had big problems with the localization and navigation, which are basic functions. This limited us to try further and more difficult tests. We gain experience and improve our software so we will try this time more difficult tests.
 
-We have three different strategies concerning the localization problem. The first one is to use our own particle filter algorithm. The second is to use the amcl package from ROS. And the third strategy is to use our SLAM algorithm mentioned in chapter~\ref{sec:slam} for localization. Because we have not yet decided which solution to use, we will describe all three in short.
+We have three different strategies concerning the localization problem. The first one is to use our own particle filter algorithm. The second is to use the amcl package from ROS. And the third strategy is to use our SLAM algorithm mentioned in chapter~\ref{sec:slam} for localization. Because we have not yet decided which solution to use, we will mention all three in short.
 
 \subsection{Particle-Filter (TH-Nuernberg)}
-We are working on an own particle filter algorithm at our laboratory. Its functionality is close to amcl localization. If we get it working in time, we were proud to use our own localization algorithm at the contest.
+We are working on an own particle filter algorithm at our laboratory. Its functionality is close to amcl localization. If we get it working in time, we would like to use our own software at the contest.
 
 \subsection{Particle-Filter (ROS-AMCL)}
-The navigation stack from ROS-System includes a package called amcl (adaptive Monte Carlo localization). It provides a particle filter algorithm for robot localization. We already checked the compatibility of amcl algorithm and our SLAM approach. So we are able to record a map with our SLAM algorithm and afterwards locate and navigate in that map via amcl and navigation stack from ROS.
+The navigation stack from ROS-System includes a package called amcl (adaptive Monte Carlo localization). It provides a particle filter algorithm for robot localization. We already checked the compatibility of amcl algorithm and our SLAM approach. So we are able to record a map with our SLAM algorithm and afterwards locate and navigate in that map via amcl and navigation stack from~ROS.
 
 \subsection{SLAM for Localization}
 SLAM means Simultaneous Localization and Mapping. This is because while recording a map, the robot needs to know its position in the map - so it must locate itself in the map while building the map. If we disable the mapping part from our SLAM algorithm, we are able to load a previously recorded map and locate the robot. The problem with this approach is that if the algorithm fails to process one measurement, the localization is lost in most cases and we have to quit the run. Particle filters are able to recover from such failures.
