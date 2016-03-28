@@ -2,6 +2,8 @@ The software architecture is based on the Robot Operating System ROS. The system
 
 Several software tools are needed for image processing and controlling the system. In the following we generally describe the software we use when developing and in the contest.
 
+Unless otherwise stated, the following software is available from the official ubuntu software repositories.
+
 \begin{description}
 	\item [cgdb] For online-debugging we use cgdb. It is a command line interface to the GNU debugger software. 
 	\item [dd] We create images from the hard discs to recover from a hard disc failure at the contest.
@@ -10,14 +12,14 @@ Several software tools are needed for image processing and controlling the syste
 	\item [git] Our software is maintained via git version  control system. Git enables us working simultaneously on our software tree.  
 	\item [htop] To watch active processes and CPU-Load we use htop. 
 	\item [openssh-server] It provides access to the robot via ssh protocol. 
-	\item [QtSixA] We steer our youBot with a Playstation~3 joystick. We need this software to connect the joystick to the PC via bluetooth.
+	\item [QtSixA] We steer our youBot with a Playstation~3 joystick. We need this software to connect the joystick to the PC via bluetooth.\footnote{http://qtsixa.sourceforge.net/}
 	\item  [screen] Each time we accessing the platform through ssh we enter a screen session. With this software we are able to open multiple command line sessions, set a split screen and reconnect to a session if network connection drops. 
 	\item [stress] We used stress to test our thermal management. It immediately can switch all CPU load to 100\%, so it simulates worst case CPU load. 
 	\item [vim] For developing over ssh connection on the robots PCs, or editing ROS-Launchfiles we use vim text editor with several plugins.
-	\item [OpenCV] OpenCv has been used to build an 2D image processing node. Some useful functions and algorithms, have been included into our object recognition.
+	\item [OpenCV] OpenCv has been used to build an 2D image processing node. Some useful functions and algorithms, have been included into our object recognition.\footnote{http://opencv.org/}
 \end{description}
 
-\noindent Additionally we use the following ROS packages:
+\noindent Additionally we use the following ROS\footnote{http://wiki.ros.org/} packages:
 
 \begin{description}
 	\item [amcl] For localization problem we eventually use amcl package. It implements a particle filter algorithm. (see chapter \ref{sec:loc})
