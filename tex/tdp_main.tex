@@ -23,6 +23,8 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{todonotes}
+\usepackage[style=numeric, backend=biber]{biblatex}
+\addbibresource{Bibliographie.bib}
 \urldef{\mailsa}\path|{alfred.hofmann, ursula.barth, ingrid.haas, frank.holzwarth,|
 \urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
 \urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@springer.com|    
@@ -119,5 +121,13 @@ This is an amazing abstract. It will be more substantial when more text ist adde
 
 \section{Conclusion}
 \input{conclusion.tex}
+
+%BIBLIOGRAPHY
+
+
+
+\clearpage
+\printbibliography 
+\clearpage
 
 \end{document}

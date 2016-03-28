@@ -3,7 +3,7 @@ As a first attempt on the RoboCup atWork \todo{consistent style of RaW} competit
 We have three different strategies concerning the localization problem. The first one is to use our own particle filter algorithm. The second is to use the amcl package from ROS. And the third strategy is to use our SLAM algorithm mentioned in chapter~\ref{sec:slam} for localization. Because we have not yet decided which solution to use, we will mention all three in short.
 
 \subsection{Particle-Filter (TH-Nuernberg)}
-We are working on an own particle filter algorithm at our laboratory. Its functionality is close to amcl localization. If we get it working in time, we would like to use our own software at the contest.
+We are working on an own particle filter algorithm at our laboratory. Its functionality is close to amcl localization, \cite{pf_fox} and \cite{pr}. If we get it working in time, we would like to use our own software at the contest.
 
 \subsection{Particle-Filter (ROS-AMCL)}
 The navigation stack from ROS-System includes a package called amcl (adaptive Monte Carlo localization). It provides a particle filter algorithm for robot localization. We already checked the compatibility of amcl algorithm and our SLAM approach. So we are able to record a map with our SLAM algorithm and afterwards locate and navigate in that map via amcl and navigation stack from~ROS.
