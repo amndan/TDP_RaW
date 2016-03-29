@@ -23,8 +23,8 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{todonotes}
-\usepackage[style=numeric, backend=biber]{biblatex}
-\addbibresource{Bibliographie.bib}
+%\usepackage[style=numeric, backend=biber]{biblatex}
+%\addbibresource{Bibliographie.bib}
 \urldef{\mailsa}\path|{alfred.hofmann, ursula.barth, ingrid.haas, frank.holzwarth,|
 \urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
 \urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@springer.com|    
@@ -50,7 +50,7 @@
 \author{Jon Martin
 %\thanks{Please note that the LNCS Editorial assumes that all authors have used
 %the western naming convention, with given names preceding surnames. This determines the structure of the names in the running heads and the author index.}
-\and Daniel Ammon\and Dominik Heigl\and Florian Gram{\ss} \and Alexander Gsell \and Tobias Fink
+\and Daniel Ammon\and Dominik Heigl\and Florian Gram{\ss} \and Alexander Gsell \and Tobias Fink \and Philipp Koch
 %\and\\
 %Anna Kramer\and Leonie Kunz\and Christine Rei\ss\and\\
 %Nicole Sator\and Erika Siebert-Cole\and Peter Stra\ss er
@@ -62,7 +62,7 @@
 % the affiliations are given next; don't give your e-mail address
 % unless you accept that it will be published
 \institute{Institute of Technology Georg-Simon-Ohm,\\
-Kesslerplatz 12, 90489 N\"urnberg, Germany\\
+Kesslerplatz 12, 90489 Nuremberg, Germany\\
 \url{http://www.th-nuernberg.de}}
 
 %
@@ -127,7 +127,9 @@ This is an amazing abstract. It will be more substantial when more text ist adde
 
 
 \clearpage
-\printbibliography 
+\bibliographystyle{plain}
+\bibliography{Bibliographie}
+%\printbibliography 
 \clearpage
 
 \end{document}
