@@ -10,5 +10,3 @@ The navigation stack from ROS-System includes a package called amcl (adaptive Mo
 
 \subsection{SLAM for Localization}
 SLAM means Simultaneous Localization and Mapping. This is because while recording a map, the robot needs to know its position in the map - so it must locate itself in the map while building the map. If we disable the mapping part from our SLAM algorithm, we are able to load a previously recorded map and locate the robot. The problem with this approach is that if the algorithm fails to process one measurement, the localization is lost in most cases and we have to quit the run. Particle filters are able to recover from such failures.
-
-\todo{if we need more: multible laser scanner setup}
