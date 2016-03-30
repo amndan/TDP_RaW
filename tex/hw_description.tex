@@ -1,63 +1,69 @@
 We use the KUKA youBot omni-directional mobile platform, which is equipped with a 5 DOF manipulator (Figure~\ref{fig:youBot}). At the end effector of the manipulator an Intel RealSense camera with a motion sensor has been mounted. Next to the camera we replaced the standard gripper from youBot with an also youBots soft two-finger gripper. Thanks to it we are able to grasp bigger and more complex objects more precisely.
 
 \begin{figure}[htbp]
-	\centering
-	\missingfigure[figwidth=6cm]{image from youBot + Gripper + IMU}
-	\caption{KUKA youBot Plattform}
-	\label{fig:youBot}
+	\begin{minipage}{0.45\textwidth}
+		\missingfigure[figwidth=6cm]{image from youBot + Gripper + IMU}
+		\caption{KUKA youBot Plattform}
+		\label{fig:youBot}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\textwidth}
+		\begin{table}[htbp]
+			\label{tab:hw}
+			\caption{Hardware Specifications}
+			\centering
+			\begin{tabular}{ | p{2cm} | p{3cm} | }
+				\hline
+				\bfseries{PC 1} &  \\
+				\hline
+				CPU & XXXXXXXX \\
+				RAM & XXXXXXXX \\
+				HDD & XXXXXXXX \\
+				OS & Ubuntu 14.04 \\
+				\hline \hline
+				\bfseries{PC 2} &  \\
+				\hline
+				CPU & XXXXXXXX \\
+				RAM & XXXXXXXX \\
+				HDD & XXXXXXXX \\
+				OS & Lubuntu 14.04 \\
+				\hline \hline
+				\bfseries{Grasp} &  \\
+				\hline
+				a & XXXXXXXX \\
+				b & XXXXXXXX \\
+				c & XXXXXXXX \\
+				\hline \hline
+				\bfseries{Lidar} &  \\
+				\hline
+				a & XXXXXXXX \\
+				b & XXXXXXXX \\
+				c & XXXXXXXX \\
+				\hline \hline
+				\bfseries{Router} &  \\
+				\hline
+				a & XXXXXXXX \\
+				b & XXXXXXXX \\
+				c & XXXXXXXX \\
+				\hline \hline
+				\bfseries{IMU} &  \\
+				\hline
+				a & XXXXXXXX \\
+				b & XXXXXXXX \\
+				c & XXXXXXXX \\
+				\hline
+			\end{tabular}
+			\label{tab:hw}
+		\end{table}
+	\end{minipage}
 \end{figure}
+
 
 A Hokuyo URG-04LX-UG01 laser scanner at the front of the youBot platform is used for localization and navigation. We are planning to add a second laser scanner of the same type on the back of the robot. This improves localization quality and ensures better obstacle avoidance, mainly when driving backwards with the robot.
 
 Last year we used the internal computer, together with an external ASUS Mini PC (4 GB RAM, Intel Core i3). We used the internal computer in the youBot to start-up the motors and also for the SLAM. This was a huge error because we added an enormous data transfer between the two computers, what slowed down the complete system. To avoid the communication problems and latency between them both, we decided to run everything, except the motor drivers, on the external PC. We also replace the slow i3 for a more powerful CPU Intel Core i7-4790K, 4x 4.00GHz. Table~\ref{tab:hw} shows our new hardware specifications\todo{fill in specs and format table}. 
 
-\begin{table}[htbp]
-	\label{tab:hw}
-	\caption{Hardware Specifications}
-	\centering
-	\begin{tabular}{ | p{2cm} | p{3cm} | }
-		\hline
-		\bfseries{PC 1} &  \\
-		\hline
-		CPU & XXXXXXXX \\
-		RAM & XXXXXXXX \\
-		HDD & XXXXXXXX \\
-		OS & Ubuntu 14.04 \\
-		\hline \hline
-		\bfseries{PC 2} &  \\
-		\hline
-		CPU & XXXXXXXX \\
-		RAM & XXXXXXXX \\
-		HDD & XXXXXXXX \\
-		OS & Lubuntu 14.04 \\
-		\hline \hline
-		\bfseries{Grasp} &  \\
-		\hline
-		a & XXXXXXXX \\
-		b & XXXXXXXX \\
-		c & XXXXXXXX \\
-		\hline \hline
-		\bfseries{Lidar} &  \\
-		\hline
-		a & XXXXXXXX \\
-		b & XXXXXXXX \\
-		c & XXXXXXXX \\
-		\hline \hline
-		\bfseries{Router} &  \\
-		\hline
-		a & XXXXXXXX \\
-		b & XXXXXXXX \\
-		c & XXXXXXXX \\
-		\hline \hline
-		\bfseries{IMU} &  \\
-		\hline
-		a & XXXXXXXX \\
-		b & XXXXXXXX \\
-		c & XXXXXXXX \\
-		\hline
-	\end{tabular}
-	\label{tab:hw}
-\end{table}
+
 
 For connecting the two PCs we use a router mounted on the bag of youBot. With external machines we can connect to the routers network and communicate with both PCs on the youBot.
 
