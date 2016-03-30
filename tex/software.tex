@@ -1,6 +1,6 @@
 The software architecture is based on the Robot Operating System ROS. The system runs with Ubuntu 14.04 and ROS Indigo installed. The ROS communication infrastructure is used to communicate and pass information between the nodes, as for example camera data or execution orders for the 5 DOF manipulator. 
 
-Several software tools are needed for image processing and controlling the system. In the following we generally describe the software we use when developing and in the contest.
+Several software tools are needed for image processing and controlling the system. In the following, software used for developing or to control the robot in the competition is listed. 
 
 Unless otherwise stated, the following software is available from the official ubuntu software repositories.
 
@@ -18,6 +18,7 @@ Unless otherwise stated, the following software is available from the official u
 	\item [vim] For developing over ssh connection on the robots PCs, or editing ROS-Launchfiles we use vim text editor with several plugins.
 	\item [OpenCV] OpenCv has been used to build an 2D image processing node. Some useful functions and algorithms, have been included into our object recognition.\footnote{http://opencv.org/}
 \end{description}
+\todo{Nicht schoen das...aber auf die Schnelle nix besseres da}
 
 \noindent Additionally we use the following ROS\footnote{http://wiki.ros.org/} packages:
 
@@ -33,7 +34,7 @@ Unless otherwise stated, the following software is available from the official u
 \noindent Finally our own software packages:
 
 \begin{description}
-	\item [ohm-tsd-slam] For recording a map from the environment we use out own SLAM algorithm. (see chapter~\ref{sec:slam})
+	\item [ohm\_tsd\_slam] For recording a map from the environment we use out own SLAM algorithm. (see chapter~\ref{sec:slam})
 	\item [particle-filter] For localization problem we eventually use our own particle filter instead of amcl package. (see chapter~\ref{sec:loc})
 	\item [statemachine] To control the robot we have implemented a statemachine algorithm with the statemachine framework from our laboratory. (see chapter~\ref{sec:mis})
 \end{description}
